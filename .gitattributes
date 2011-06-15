@@ -1,0 +1,16 @@
+# Adds a revision ID to files exported with git-archive. The following
+# string will be substituted:
+#
+#       $Format:Git ID: (%h) %ci$
+#
+# when called with:
+#
+#       git archive HEAD | tar xf - --to-stdout | less
+#
+# Perform the substitution on the following files:
+*.rb    export-subst
+
+# Exclude the following from inclusion by git-archive:
+*~      export-ignore
+.git*   export-ignore
+*.log   export-ignore
