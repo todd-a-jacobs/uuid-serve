@@ -1,0 +1,70 @@
+= CodeGnome UUID Generator
+Todd A. Jacobs <codegnome.consulting+uuid-serve@gmail.com>
+
+.Copyright
+----------------------------------------------------------------------
+Copyright 2010, 2011 Todd A. Jacobs
+All Rights Reserved
+----------------------------------------------------------------------
+
+.Program License
+----------------------------------------------------------------------
+Released under the GNU General Public License (GPL)
+http://www.gnu.org/copyleft/gpl.html
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+----------------------------------------------------------------------
+
+== Features and Design Goals
+
+. Simple Sinatra app that is easy to maintain.
+. Minimalistic gem requirements.
+. Cross-platform support for generating random UUIDs.
+
+== Why Use uuid-serve?
+
+Ruby doesn't provide cross-platform support for
+http://www.ietf.org/rfc/rfc4122.txt[RFC-4122] UUIDs in the standard
+library. You have to install a third-party gem or roll your own code in
+order to generate UUIDs. There are a number of use-cases in which
++uuid-serve.rb+ is a better alternative.
+
+.Example Use Cases
+. Strict change-control policies make installing a third-party gem into
+multiple applications sub-optimal. With uuid-serve, you only have to
+make changes in a single server application, which is then available to
+all consumer processes.
+. Regulatory environments where third-party gems must be audited before
+inclusion into applications. By ensuring that only one application is
+generating the UUIDs, it may reduce the scope of any audit requirements.
+. Company policies which prohibit the inclusion of third-party gems
+within core applications. By treating UUIDs as a consumable web
+resource, rather than building them into the core application, it may be
+possible to place UUID generation outside an application's policy
+footprint.
+
+To address these use cases, this http://www.sinatrarb.com/[Sinatra] app
+provides random UUIDs for consumption by external applications.
+Specifically, it provides a RESTful API for retrieving one or more
+RFC-4122 Version 4 UUID strings as plain text. Please see the running
+application's home page for additional details.
+
+== Running the Application
+
+.Run uuid-serve from the command-line
+----
+ruby uuid-serve.rb
+----
+
+.View local uuid-serve instance with Firefox
+----
+firefox http://localhost:4567/
+----
