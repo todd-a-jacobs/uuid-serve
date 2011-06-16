@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
 # vim:et:sw=2:tw=72
 
-# == Name
+# Name:
 #    uuid-serve.rb
 #
-# == Version
+# Version:
 #    $Format:Git ID: (%h) %ci$
 #
-# == Purpose
+# Purpose:
 #    Serve random universally-unique identifiers (UUID Version 4) in
 #    accordance with RFC-4122.
 #
