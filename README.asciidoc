@@ -57,9 +57,9 @@ Specifically, it provides a RESTful API for retrieving one or more
 RFC-4122 Version 4 UUID strings as plain text. Please see the running
 application's home page for additional details.
 
-== Running the Application
+== Running the Application Locally
 
-.Run uuid-serve from the command-line
+.Start uuid-serve from the command-line
 ----
 ruby uuid-serve.rb
 ----
