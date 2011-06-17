@@ -68,3 +68,17 @@ ruby uuid-serve.rb
 ----
 firefox http://localhost:4567/
 ----
+
+== Try the Application Live on the Web
+
+If you'd like to see uuid-serve in action, you can use the reference
+implementation that's already on the web.
+
+* Access the reference implementation via HTTP +
+  http://uuids.codegnome.com/
+
+* Access the reference implementation using SSL +
+  https://uuid-serve.herokuapp.com/
+
+The reference implementation is open to the public. It is a free
+service, so you're welcome to use it for production use of any kind.
