@@ -72,6 +72,8 @@ __END__
       %a(href='/') Home
       |
       %a(href='/uuid') Generate UUID
+      |
+      %a(href='https://github.com/CodeGnome/uuid-serve') GPLv3 Source Code
     = yield
     %hr
     Copyright &copy; 2010,2011 Todd A. Jacobs. All rights reserved.
