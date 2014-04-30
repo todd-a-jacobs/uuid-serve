@@ -1,5 +1,4 @@
 = CodeGnome UUID Generator
-Todd A. Jacobs <codegnome.consulting+uuid-serve@gmail.com>
 
 .Copyright
 ----------------------------------------------------------------------
