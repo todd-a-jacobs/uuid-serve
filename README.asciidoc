@@ -3,7 +3,7 @@ Todd A. Jacobs <codegnome.consulting+uuid-serve@gmail.com>
 
 .Copyright
 ----------------------------------------------------------------------
-Copyright 2010, 2011 Todd A. Jacobs
+Copyright 2010, 2011, 2014 Todd A. Jacobs
 All Rights Reserved
 ----------------------------------------------------------------------
 
@@ -31,11 +31,14 @@ General Public License for more details.
 
 == Why Use uuid-serve?
 
-Ruby doesn't provide cross-platform support for
+Ruby didn't provide cross-platform support for
 http://www.ietf.org/rfc/rfc4122.txt[RFC-4122] UUIDs in the standard
-library. You have to install a third-party gem or roll your own code in
-order to generate UUIDs. There are a number of use-cases in which
-+uuid-serve.rb+ is a better alternative.
+library until
+http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/trunk/lib/securerandom.rb?revision=21868&view=markup&pathrev=21868[r21868]
+made its way into Ruby 1.9.3. Before then, you had to install a
+third-party gem or roll your own code in order to generate UUIDs. There
+are a number of use-cases in which +uuid-serve.rb+ was (and perhaps
+still is) a better alternative.
 
 .Example Use Cases
 . Strict change-control policies make installing a third-party gem into
