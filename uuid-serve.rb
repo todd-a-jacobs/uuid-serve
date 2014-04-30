@@ -74,16 +74,24 @@ __END__
       %a(href='https://github.com/CodeGnome/uuid-serve') GPLv3 Source Code
     = yield
     %hr
-    Copyright &copy; 2010,2011 Todd A. Jacobs. All rights reserved.
+    Copyright &copy; 2010, 2011, 2014 Todd A. Jacobs. All rights reserved.
 
 @@ home
 %h1 CodeGnome UUID Generator
 %h2 Why use uuid-serve?
 %p
-  Ruby doesn't provide cross-platform support for RFC-4122 UUIDs in the
-  standard library. You have to install a third-party gem or roll your
-  own code in order to generate UUIDs. There are a number of use-cases
-  in which uuid-serve is a better alternative.
+  Ruby didn't provide cross-platform support for
+  %a{href: 'http://www.ietf.org/rfc/rfc4122.txt'} RFC-4122
+  UUIDs in the standard library until
+  - url =  'http://svn.ruby-lang.org/cgi-bin/viewvc.cgi/trunk'
+  - url += '/lib/securerandom.rb?revision=21868&view=markup&pathrev=21868'
+  %a{href: url} r21868
+  made its way into Ruby 1.9.3. Before then, you had to install a
+  third-party gem or roll your own code in order to generate UUIDs.
+  There are a number of use-cases in which
+  %em
+    uuid-serve.rb
+  was (and perhaps still is) a better alternative.
 %h3 Example Use Cases
 %ul
   %li
