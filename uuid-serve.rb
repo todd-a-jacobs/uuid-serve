@@ -12,7 +12,7 @@
 #    accordance with RFC-4122.
 #
 # Copyright:
-#    Copyright 2010, 2011 Todd A. Jacobs
+#    Copyright 2010, 2011, 2014 Todd A. Jacobs
 #    All Rights Reserved
 #
 # License:
