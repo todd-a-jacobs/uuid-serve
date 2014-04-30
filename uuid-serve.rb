@@ -31,7 +31,7 @@
 
 require 'rubygems'
 require 'sinatra'
-require 'uuidtools'
+require 'securerandom'
 
 # Maximum number of UUIDs that can be generated from a single request.
 # Set this to a sensible limit to prevent abuse.
@@ -45,7 +45,7 @@ end
 
 get '/uuid/?' do
   content_type 'text/plain'
-  UUIDTools::UUID.random_create.to_s
+  SecureRandom.uuid
 end
 
 get '/bulk/:count/?' do
@@ -56,9 +56,7 @@ get '/bulk/:count/?' do
     "Limit of #{MAX_COUNT} UUIDs exceeded" if count > MAX_COUNT
   uuids = []
   content_type 'text/plain'
-  count.times do
-      uuids << UUIDTools::UUID.random_create.to_s
-  end
+  count.times { uuids << SecureRandom::uuid }
   uuids.join "\n"
 end
 
