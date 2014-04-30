@@ -1,5 +1,5 @@
 ruby   '2.1.1'
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'uuidtools'
